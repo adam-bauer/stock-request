@@ -1,0 +1,8 @@
+uuid: 6ca31007-bfe6-4dbd-ac20-2844850db8e6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Financial Coding Function'
+vid: financial_coding_function
+description: ''
+weight: 0

@@ -1,0 +1,14 @@
+uuid: ec99caf6-5a33-428f-8d60-ea5c67988d35
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.departmenthead
+  module:
+    - user
+id: user_add_role_action.departmenthead
+label: 'Add the DepartmentHead role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: departmenthead

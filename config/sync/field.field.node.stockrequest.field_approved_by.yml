@@ -1,0 +1,46 @@
+uuid: 21dfde7f-4526-4131-b110-cabf55af8528
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_approved_by
+    - node.type.stockrequest
+    - paragraphs.paragraphs_type.approval_signature_para
+  module:
+    - entity_reference_revisions
+id: node.stockrequest.field_approved_by
+field_name: field_approved_by
+entity_type: node
+bundle: stockrequest
+label: 'Approved by'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      approval_signature_para: approval_signature_para
+    target_bundles_drag_drop:
+      approval_signature_para:
+        enabled: true
+        weight: 7
+      financial_coding:
+        weight: 8
+        enabled: false
+      items_to_order:
+        weight: 9
+        enabled: false
+      payment_status:
+        weight: 10
+        enabled: false
+      received:
+        weight: 11
+        enabled: false
+      vendor_invoices:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

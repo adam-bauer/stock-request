@@ -1,0 +1,107 @@
+uuid: c65cc006-9d0a-449f-a656-acb4698c1ce0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.stockrequest.field_approved_by
+    - field.field.node.stockrequest.field_attached_files
+    - field.field.node.stockrequest.field_balance_not_billed
+    - field.field.node.stockrequest.field_billing_and_shipping_info
+    - field.field.node.stockrequest.field_comments
+    - field.field.node.stockrequest.field_date_requested
+    - field.field.node.stockrequest.field_date_required
+    - field.field.node.stockrequest.field_department
+    - field.field.node.stockrequest.field_department_head
+    - field.field.node.stockrequest.field_enc
+    - field.field.node.stockrequest.field_field_financial_coding_di
+    - field.field.node.stockrequest.field_financial_coding
+    - field.field.node.stockrequest.field_financial_coding_value
+    - field.field.node.stockrequest.field_financial_report
+    - field.field.node.stockrequest.field_generate_purchase_order
+    - field.field.node.stockrequest.field_items_to_order
+    - field.field.node.stockrequest.field_justification
+    - field.field.node.stockrequest.field_payment_status
+    - field.field.node.stockrequest.field_phone
+    - field.field.node.stockrequest.field_purchasing_status
+    - field.field.node.stockrequest.field_requested_budget
+    - field.field.node.stockrequest.field_requesting_office
+    - field.field.node.stockrequest.field_resale_to_students
+    - field.field.node.stockrequest.field_ship_to_address
+    - field.field.node.stockrequest.field_shipping_cost
+    - field.field.node.stockrequest.field_sr_
+    - field.field.node.stockrequest.field_sr_heading
+    - field.field.node.stockrequest.field_total_balance_due
+    - field.field.node.stockrequest.field_total_billed_amount
+    - field.field.node.stockrequest.field_total_est_cost
+    - field.field.node.stockrequest.field_vendor
+    - field.field.node.stockrequest.field_vendor_invoice
+    - node.type.stockrequest
+  module:
+    - datetime
+    - user
+id: node.stockrequest.teaser
+targetEntityType: node
+bundle: stockrequest
+mode: teaser
+content:
+  field_date_requested:
+    type: datetime_default
+    weight: 2
+    region: content
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+  field_department:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_sr_:
+    type: string
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_approved_by: true
+  field_attached_files: true
+  field_balance_not_billed: true
+  field_billing_and_shipping_info: true
+  field_comments: true
+  field_date_required: true
+  field_department_head: true
+  field_enc: true
+  field_field_financial_coding_di: true
+  field_financial_coding: true
+  field_financial_coding_value: true
+  field_financial_report: true
+  field_generate_purchase_order: true
+  field_items_to_order: true
+  field_justification: true
+  field_payment_status: true
+  field_phone: true
+  field_purchasing_status: true
+  field_requested_budget: true
+  field_requesting_office: true
+  field_resale_to_students: true
+  field_ship_to_address: true
+  field_shipping_cost: true
+  field_sr_heading: true
+  field_total_balance_due: true
+  field_total_billed_amount: true
+  field_total_est_cost: true
+  field_vendor: true
+  field_vendor_invoice: true
+  links: true

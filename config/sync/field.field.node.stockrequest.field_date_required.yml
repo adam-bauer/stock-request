@@ -1,0 +1,24 @@
+uuid: cc3e6f3a-f760-4300-8712-d13948897f69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_required
+    - node.type.stockrequest
+  module:
+    - datetime
+id: node.stockrequest.field_date_required
+field_name: field_date_required
+entity_type: node
+bundle: stockrequest
+label: 'Date Required'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+7 days'
+default_value_callback: ''
+settings: {  }
+field_type: datetime

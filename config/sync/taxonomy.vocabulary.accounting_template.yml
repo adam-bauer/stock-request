@@ -1,0 +1,8 @@
+uuid: cf4a7c0a-26d1-4423-971e-0f7fd72289ed
+langcode: en
+status: true
+dependencies: {  }
+name: 'Accounting Template'
+vid: accounting_template
+description: ''
+weight: 0

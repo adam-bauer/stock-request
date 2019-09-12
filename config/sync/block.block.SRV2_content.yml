@@ -1,0 +1,22 @@
+uuid: a950d6f6-76f0-49a3-a678-4037cf25fcd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - SRV2
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: SRV2_content
+theme: SRV2
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: 21687dfb-4b14-4691-b3ff-445c25f13415
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_approver_position
+    - node.type.signature
+    - taxonomy.vocabulary.approval_signature_position
+id: node.signature.field_approver_position
+field_name: field_approver_position
+entity_type: node
+bundle: signature
+label: 'Approver position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      approval_signature_position: approval_signature_position
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

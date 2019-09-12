@@ -1,0 +1,32 @@
+uuid: 5bb57c09-2e4f-4ca2-b653-aaf72577dc7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_financial_report
+    - node.type.stockrequest
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    php: php
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.stockrequest.field_financial_report
+field_name: field_financial_report
+entity_type: node
+bundle: stockrequest
+label: 'Financial PDF'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '<p><a href=<?php echo $_SERVER[''REQUEST_URI''] . "/financial"; ?>>Financial Report</a></p>'
+    format: php
+default_value_callback: field_default_token_default_value_callback
+settings: {  }
+field_type: text

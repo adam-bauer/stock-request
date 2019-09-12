@@ -1,0 +1,23 @@
+uuid: 55624548-fee7-4c32-a643-5862019007e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_head
+    - node.type.stockrequest
+id: send_to_department_head
+label: 'Send to Department Head'
+subject: 'There is a stockrequest for your review as Department Head'
+recipient_types:
+  entity_reference_user:
+    id: entity_reference_user
+    provider: workbench_email
+    status: true
+    settings:
+      fields:
+        - 'node:field_department_head'
+bundles:
+  'node:stockrequest': 'node:stockrequest'
+body:
+  value: "There is a new stock request for your review\r\n [node:title]\r\n [node:url]"
+  format: plain_text

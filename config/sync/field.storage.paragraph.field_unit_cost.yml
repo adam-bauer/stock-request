@@ -1,0 +1,18 @@
+uuid: 2984bb40-ae99-4338-b6c5-1fe0fd9a7a6f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_unit_cost
+field_name: field_unit_cost
+entity_type: paragraph
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

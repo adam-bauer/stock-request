@@ -1,0 +1,29 @@
+uuid: 7ef7bb62-bfe8-4950-9be5-f942bb925885
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_fc_subactivity
+    - taxonomy.vocabulary.accounting_template
+    - taxonomy.vocabulary.subactivity
+id: taxonomy_term.accounting_template.field_fc_subactivity
+field_name: field_fc_subactivity
+entity_type: taxonomy_term
+bundle: accounting_template
+label: SubActivity
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      subactivity: subactivity
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

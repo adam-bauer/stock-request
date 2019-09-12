@@ -1,0 +1,20 @@
+uuid: 50fad4e3-ff0a-4307-b6cf-e05d405143f1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - SRV2
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: SRV2_local_actions
+theme: SRV2
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

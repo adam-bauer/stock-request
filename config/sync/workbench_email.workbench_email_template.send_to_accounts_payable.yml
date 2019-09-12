@@ -1,0 +1,23 @@
+uuid: 71dbc073-5f65-4e34-8458-f5351ada94d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.stockrequest
+    - user.role.accountspayable
+id: send_to_accounts_payable
+label: 'Send to accounts payable'
+subject: 'There is a stock request for ready for accounts payable'
+recipient_types:
+  role:
+    id: role
+    provider: workbench_email
+    status: true
+    settings:
+      roles:
+        accountspayable: accountspayable
+bundles:
+  'node:stockrequest': 'node:stockrequest'
+body:
+  value: "There is a new stock request for your review\r\n [node:title]\r\n [node:url]"
+  format: plain_text

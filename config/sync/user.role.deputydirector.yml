@@ -1,0 +1,22 @@
+uuid: c4604ebc-e172-46d8-bc72-c36653245d1c
+langcode: en
+status: true
+dependencies: {  }
+id: deputydirector
+label: DeputyDirector
+weight: -6
+is_admin: null
+permissions:
+  - 'create field_approval_date'
+  - 'create field_approved_by'
+  - 'create field_approved_by_paragraph'
+  - 'create paragraph content approval_signature_para'
+  - 'delete paragraph content approval_signature_para'
+  - 'delete paragraph content items_to_order'
+  - 'edit any stockrequest content'
+  - 'edit field_approval_date'
+  - 'edit field_approved_by'
+  - 'edit field_approved_by_paragraph'
+  - 'update paragraph content approval_signature_para'
+  - 'update paragraph content items_to_order'
+  - 'use node.administration form mode'

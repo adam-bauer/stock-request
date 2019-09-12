@@ -1,0 +1,21 @@
+base:
+  version: VERSION
+  css:
+    theme:
+      css/style.css: {}
+      css/colors.css: {}
+
+print-styling:
+  css:
+    theme:
+      css/print-style.css: {}
+      
+color.preview:
+  version: VERSION
+  css:
+    theme:
+      color/preview.css: {}
+  js:
+    color/preview.js: {}
+  dependencies:
+    - color/drupal.color

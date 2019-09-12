@@ -1,0 +1,33 @@
+uuid: 45f3a7f3-225b-4f57-9418-19368885cf33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.financial_coding_activity.field_subactivity
+    - taxonomy.vocabulary.financial_coding_activity
+  module:
+    - text
+id: taxonomy_term.financial_coding_activity.default
+targetEntityType: taxonomy_term
+bundle: financial_coding_activity
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_subactivity:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

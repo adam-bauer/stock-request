@@ -1,0 +1,318 @@
+/* ITEMS TO HIDE FOR DEVELOPMENT */
+/* https://srv2.avtec.ak/entityprint/pdf/node/[nid]/debug
+/* access this page https://srv2.avtec.ak/node/[nid]/financial */
+/* AVTEC theme */
+/*format header */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+body{
+		counter-reset:section;
+}
+
+body{
+	font-size:1.1em;
+	line-height:1.4;
+	}	
+.field--type-entity-reference,
+body{
+	font-family: 'Noto Serif', serif;
+	margin:0;
+	background-color:#ffffff;
+}
+.paragraph--type-items-to-order .group-left:before{
+	counter-increment:section;
+	content: "Item " counter(section) ".";
+	}
+
+}
+
+
+
+.dialog-off-canvas-main-canvas.data-off-canvas-main-canvas{}
+
+#page-wrapper{width:1000px;margin:0;}
+
+#page{width:1000px;margin:0;}
+
+#main-wrapper{width:1060px;margin:0;}
+
+.layout-main-wrapper.layout-container{}
+
+#main{margin:0;}
+
+.layout-main{margin:0;}
+
+#content{margin:0;}
+.layout-sidebar-second .main-content {
+    margin-right: 0;
+    margin-left: 0;
+}
+.column.main-content{width:1000px;margin:0;}
+
+.section{margin:0;}
+
+#main-content{}
+
+.field--label-inline{}     
+.field--label-above{}
+
+.field--label-hidden{}
+
+.field--type-entity-reference .field__label, 
+.field__label{text-transform: uppercase;border:thin solid black;}
+
+.field__item{border:thin solid black;background-color:white;padding-left:5px;}
+
+.field__label,
+.field__item{font-weight:500;page-break-inside: avoid;}
+
+.field--type-entity-reference{margin:0;}
+
+.group-footer{margin-top:7px;}
+
+.field--label-above{background-color:#efefff;margin-top:7px;}
+
+.field-content img{width:200px;margin:auto;padding-left:20px;}
+
+.paragraph--type-items-to-order .group-left .field__item{border:none;line-height:1;}
+
+.paragraph--type-items-to-order .group-left .field__item p{margin:0;}
+
+.paragraph--type-items-to-order .group-right{margin:0;}
+
+.region.region-content{}
+
+#block-avtec-page-title{}
+
+.contextual-region.block.block-core.block-page-title-block{}
+
+.content{}
+
+  
+.js-quickedit-page-title.title page-title{}
+
+.field.field--name-title.field--type-string{display:none;}
+
+#block-avtec-local-tasks{}
+
+.contextual-region.block.block-core.block-local-tasks-block{}
+
+nav .tabs{}
+
+      
+.visually-hidden{display:none;}
+
+.tabs.primary{display:none;}
+
+/
+#block-avtec-content{}
+
+.block.block-system.block-system-main-block{}
+
+.contextual-region.node.node--type-stockrequest.node--view-mode-financial-pdf.ds-2col-stacked{}
+
+.group-header{margin-bottom:7px}
+
+ 
+.field.field--name-taxonomy-term-title.field--type-ds.field--label-hidden.field__item{
+	border:none;
+	background:none;
+}
+
+.field.field--name-field-vendor.field--type-entity-reference{}
+
+.contextual-region.taxonomy-term.taxonomy-term--type-vendors.taxonomy-term--view-mode-financial-coding-vendors-pdf.ds-2col-stacked{}
+
+.field.field--name-taxonomy-term-title.field--type-ds.field__item{}
+
+.group-left{margin-bottom:7px}
+
+.field.field--name-field-address.field--type-string.field__item{
+margin:0;
+border:none;
+background-color:white;
+padding-left:5px;
+}
+
+.field.field--name-field-city.field--type-entity-reference.field__item::after {
+    content: ", ";
+}
+
+.field.field--name-field-city.field--type-entity-reference.field--label-hidden.field__item{
+margin:0;
+width:auto;
+float:left;
+border:none;
+background-color:white;
+padding-left:5px;
+}
+
+ 
+.field.field--name-field-state.field--type-entity-reference.field__item{
+margin:0;
+width:auto;
+float:left;
+border:none;
+background-color:white;
+padding-left:5px;
+}
+
+.field.field--name-field-zip-code.field--type-entity-reference.field__item{
+margin:0;
+width:auto;
+float:left;
+border:none;
+background-color:white;
+padding-left:5px;
+}
+
+.group-right{margin-bottom:7px}
+
+.field.field--name-field-pvn.field--type-string{}
+
+.field.field--name-field-acc-.field--type-string{}
+
+.field.field--name-field-phone.field--type-string{}
+
+.field.field--name-field-fax.field--type-string{}
+
+.field.field--name-field-vendor-email.field--type-email.field__item{}
+
+.group-footer{}
+
+.field.field--name-field-financial-coding.field--type-entity-reference-revisions{}
+
+.paragraph.paragraph--type--financial-coding.paragraph--view-mode--default{}
+
+.field.field--name-field-fy.field--type-string{}
+
+.field.field--name-field-account.field--type-entity-reference{}
+
+.field.field--name-field-amount.field--type-float{}
+
+.field.field--name-field-accounting-template.field--type-entity-reference{}
+
+.contextual-region.taxonomy-term.taxonomy-term--type-accounting-template.taxonomy-term--view-mode-financial-coding-pdf.ds-2col{}
+
+.field.field--name-taxonomy-term-title.field--type-ds{}
+
+.field.field--name-field-fc-fund.field--type-entity-reference{}
+
+.node_view{}
+
+.field.field--name-field-items-to-order.field--type-entity-reference-revisions{}
+
+.field__items{}
+
+.paragraph.paragraph--type-items-to-order.paragraph--view-mode-items-to-order-financial-.ds-2col-stacked.clearfix{}
+
+.field.field--name-field-quantity .field__label{float:none;}
+
+.field.field--name-field-quantity{margin:auto;float:left;width:25%;}
+
+.field.field--name-field-unit-cost .field__label{float:none;}
+
+.field.field--name-field-unit-cost{margin:auto;float:left;width:25%;}
+
+.field.field--name-field-units .field__label{float:none;}
+
+.field.field--name-field-units{margin:auto;float:left;width:25%;}
+
+.field.field--name-field-extended-cost .field__label{float:none;}
+
+.field.field--name-field-extended-cost{margin:auto;float:left;width:25%;}
+
+text-formatted.field.field--name-field-description.field--type-text-with-summary{}
+
+.paragraph.paragraph--type-items-to-order.paragraph--view-mode-items-to-order-financial-.ds-2col-stacked{}
+
+.field.field--name-field-quantity.field--type-integer{}
+
+.field.field--name-field-unit-cost.field--type-float{}
+
+.field.field--name-field-extended-cost.field--type-computed-float{}
+
+text-formatted.field.field--name-field-description.field--type-text-with-summary{}
+
+.field.field--name-field-ship-to-address.field--type-string-long{}
+
+.field.field--name-field-department.field--type-entity-reference{}
+
+.field.field--name-field-date-requested.field--type-datetime{}
+
+.datetime{}
+
+.field.field--name-field-date-required.field--type-datetime{}
+
+.field.field--name-field-justification.field--type-string-long{}
+
+.field.field--name-field-resale-to-students.field--type-list-string{}
+
+.field.field--name-field-sr-.field--type-string{
+	width:25%;
+	position:relative;
+	top:0px;
+	float:right;
+}
+
+.field.field--name-field-enc.field--type-string{}
+
+.field.field--name-field-shipping-cost.field--type-decimal{}
+
+.field.field--name-field-total-balance-due.field--type-computed-float{}
+
+.field.field--name-field-total-est-cost.field--type-computed-float{}
+
+.field.field--name-field-total-billed-amount.field--type-computed-float{}
+
+.field.field--name-field-approved-by.field--type-viewsreference{}
+
+.views-element-container{}
+.field--name-field-approved-by,
+.field--name-field-justification{page-break-inside: avoid;}
+.view.view-approval-signature.view-id-approval_signature{}
+
+.view-content{}
+
+.views-row{}
+
+.field-content{}
+
+.views-field.views-field-field-approver-position{}
+
+.views-field.views-field-field-appoved-by-signature{}
+
+.field.field--name-field-sr-heading.field--type-string.field--label-inline .field__item{
+	background-image: url('alaskaseal.png');
+	 background-repeat: no-repeat;
+	 background-size: 150px 100px;
+	 background-color: #3f78a7;
+	 color:#ffffff;
+	 text-align:center;
+	 font-size:1.4em;
+	 font-weight:600;
+    height:40px;
+    width:895px;
+    vertical-align:middle;
+    padding:30px;
+}
+
+.field.field--name-field-sr-heading.field--type-string.field--label-inline .field__label{display:none;}
+.node--view-mode-pdf,
+.node--view-mode-financial-pdf{
+border:thin solid black;
+padding:5px;
+}
+.paragraph--type-items-to-order .group-header{margin:0;}
+.field__item p {margin:0;}
+.field__items .field__item{padding:0;}
+.field--label-inline .field__item{padding-left:5px;}
+.field--label-inline .field__label{background-color:#efefef;margin-right:5px;}
+.paragraph--type-financial-coding.paragraph--view-mode-financial-coding-financials-pdf .group-left,
+.paragraph--type-financial-coding.paragraph--view-mode-financial-coding-financials-pdf .group-right,
+.group-right .field--label-inline .field__label{margin:0;}
+
+.field--name-field-description.field--label-hidden.field__item{padding-left:5px;}
+.field--name-field-approved-by-paragraph.field--type-viewsreference.field--label-hidden.field__item{border:none;}
+.field--type-entity-reference .field__label{font-size:1em;}
+.field.field--name-field-accounting-template.field--type-entity-reference.field--label-hidden.field__item{border:none;}
+

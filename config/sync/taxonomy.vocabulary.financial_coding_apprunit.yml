@@ -1,0 +1,8 @@
+uuid: 8eac32cb-00d7-4565-a0f9-381c4f171961
+langcode: en
+status: true
+dependencies: {  }
+name: 'Financial Coding ApprUnit'
+vid: financial_coding_apprunit
+description: ''
+weight: 0

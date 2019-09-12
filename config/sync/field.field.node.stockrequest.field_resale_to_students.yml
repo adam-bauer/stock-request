@@ -1,0 +1,21 @@
+uuid: 48b1f46a-ca25-469b-9894-63fe4af9d43d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resale_to_students
+    - node.type.stockrequest
+  module:
+    - options
+id: node.stockrequest.field_resale_to_students
+field_name: field_resale_to_students
+entity_type: node
+bundle: stockrequest
+label: 'Resale to Students'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

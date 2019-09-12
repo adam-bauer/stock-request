@@ -1,0 +1,19 @@
+uuid: 62b50d2c-2c98-485e-8049-299244a10578
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_pvn
+    - taxonomy.vocabulary.vendors
+id: taxonomy_term.vendors.field_pvn
+field_name: field_pvn
+entity_type: taxonomy_term
+bundle: vendors
+label: PVN
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

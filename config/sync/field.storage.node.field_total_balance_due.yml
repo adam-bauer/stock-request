@@ -1,0 +1,23 @@
+uuid: 789456d7-4969-4e6c-8e01-9a265d730bce
+langcode: en
+status: true
+dependencies:
+  module:
+    - computed_field
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_total_balance_due
+field_name: field_total_balance_due
+entity_type: node
+type: computed_float
+settings: {  }
+module: computed_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,85 @@
+
+
+/* begin styles for items to order input form */
+#edit-field-items-to-order-wrapper .filter-wrapper{display:none;}
+#edit-field-items-to-order-wrapper .field--name-field-quantity,
+#edit-field-items-to-order-wrapper .field--name-field-units,
+#edit-field-items-to-order-wrapper .field--name-field-unit-cost{
+	width:32%;
+	float:left;
+	margin-bottom:5px;
+}
+#edit-field-items-to-order-wrapper .paragraph-type-top {margin-bottom:0;}
+
+#edit-field-items-to-order-wrapper .paragraph-type-title {margin-bottom:0;}
+#edit-field-items-to-order-wrapper .field--name-field-quantity .form-item label,
+#edit-field-items-to-order-wrapper .field--name-field-units .form-item label,
+#edit-field-items-to-order-wrapper .field--name-field-unit-cost .form-item label
+{display:inline;}
+
+#edit-field-items-to-order-wrapper .form-wrapper {margin-bottom: 0;}
+/*dont display these items */
+#node-stockrequest-form .form-type-vertical-tabs,
+#block-views-block-sidebar-info-for-edit-block-1,
+#block-views-block-sidebar-info-for-edit-block-2,
+#block-views-block-sidebar-info-for-edit-block-3,
+#block-views-block-sidebar-info-for-edit-block-4,
+.node-stockrequest-financal-director-form .js-form-type-vertical-tabs,
+.node-stockrequest-payables-form .js-form-type-vertical-tabs,
+.node-stockrequest-purchasing-form .js-form-type-vertical-tabs
+{display:none;}
+/* end styles for items to order input form */
+/* styles for edit forms */
+.node-stockrequest-edit-form #edit-footer,
+.node-stockrequest-edit-form #edit-actions,
+.node-stockrequest-financal-director-form #edit-moderation-state-wrapper,
+.node-stockrequest-financal-director-form #edit-actions,
+.node-stockrequest-payables-form #edit-moderation-state-wrapper,
+.node-stockrequest-department-head-form #edit-moderation-state-wrapper,
+.node-stockrequest-payables-form #edit-actions,
+.node-stockrequest-purchasing-form #edit-moderation-state-wrapper,
+.node-stockrequest-purchasing-form #edit-actions,
+.node-stockrequest-department-head-form  #edit-actions,
+[class*="edit-financal-director"] #block-views-block-sidebar-info-for-edit-block-1,
+[class*="edit-department-head"] #block-views-block-sidebar-info-for-edit-block-4,
+[class*="edit-payables"] #block-views-block-sidebar-info-for-edit-block-3,
+[class*="edit-purchasing"] #block-views-block-sidebar-info-for-edit-block-2
+{
+	z-index:100;
+	position:fixed;
+	right:0;
+	border:thin solid black;
+	padding:1em;
+	background-color:#efefef;
+	width:300px;
+	font-size: 1.2em;
+}
+
+.node-stockrequest-edit-form #edit-footer{
+		/* moderation state */
+	top:4em;
+
+}
+.node-stockrequest-financal-director-form #edit-moderation-state-wrapper,
+.node-stockrequest-payables-form #edit-moderation-state-wrapper,
+.node-stockrequest-purchasing-form #edit-moderation-state-wrapper,
+.node-stockrequest-department-head-form #edit-moderation-state-wrapper{
+		/* moderation state */
+	top:4em;
+}
+.node-stockrequest-edit-form #edit-actions,
+.node-stockrequest-financal-director-form  #edit-actions,
+.node-stockrequest-payables-form  #edit-actions,
+.node-stockrequest-purchasing-form  #edit-actions,
+.node-stockrequest-department-head-form  #edit-actions{
+	/* save and edit */
+	top:15em;
+}
+[class*="edit-financal-director"] #block-views-block-sidebar-info-for-edit-block-1,
+[class*="edit-payables"] #block-views-block-sidebar-info-for-edit-block-3,
+[class*="edit-purchasing"] #block-views-block-sidebar-info-for-edit-block-2,
+[class*="edit-department-head"] #block-views-block-sidebar-info-for-edit-block-4{
+	display: block;
+	top:20em;
+}
+.views-field.views-field-field-total-note .field-content{background-color: #ffffff;padding:4px;}

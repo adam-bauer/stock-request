@@ -1,0 +1,18 @@
+uuid: 14eaaf17-4541-4aee-b9b6-8c96ebbc2d22
+langcode: en
+status: true
+dependencies: {  }
+id: phpwkhtmltopdf
+settings:
+  orientation: portrait
+  default_paper_size: letter
+  username: ''
+  password: ''
+  binary_location: /usr/local/bin/wkhtmltopdf
+  zoom: '1'
+  toc_generate: false
+  toc_enable_back_links: false
+  toc_disable_dotted_lines: false
+  toc_disable_links: false
+  viewport_size: _none
+  remove_pdf_margins: false

@@ -1,0 +1,71 @@
+uuid: 6e52d795-a5dd-4fdd-92e9-ca71169391eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.stock_request_system_change_orde.body
+    - field.field.node.stock_request_system_change_orde.field_change_order_status
+    - field.field.node.stock_request_system_change_orde.field_comment
+    - field.field.node.stock_request_system_change_orde.field_request_date
+    - field.field.node.stock_request_system_change_orde.field_requesting_user_
+    - node.type.stock_request_system_change_orde
+  module:
+    - comment
+    - datetime
+    - text
+    - user
+id: node.stock_request_system_change_orde.default
+targetEntityType: node
+bundle: stock_request_system_change_orde
+mode: default
+content:
+  body:
+    label: above
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_change_order_status:
+    weight: 104
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_comment:
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_request_date:
+    weight: 103
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_requesting_user_:
+    weight: 102
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

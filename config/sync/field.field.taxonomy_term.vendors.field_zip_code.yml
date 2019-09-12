@@ -1,0 +1,29 @@
+uuid: ef8591b1-16d3-443d-8d11-bc2983a31738
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_zip_code
+    - taxonomy.vocabulary.vendors
+    - taxonomy.vocabulary.zip_codes
+id: taxonomy_term.vendors.field_zip_code
+field_name: field_zip_code
+entity_type: taxonomy_term
+bundle: vendors
+label: 'Zip Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      zip_codes: zip_codes
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: 04c020ea-867c-4437-8668-0c686dec57a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.signature.field_appoved_by_signature
+    - field.field.node.signature.field_approved_by_name
+    - field.field.node.signature.field_approver_position
+    - node.type.signature
+  module:
+    - user
+id: node.signature.teaser
+targetEntityType: node
+bundle: signature
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_appoved_by_signature: true
+  field_approved_by_name: true
+  field_approver_position: true

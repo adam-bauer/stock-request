@@ -1,0 +1,23 @@
+uuid: d4f38ec8-fc27-4ac7-b7cc-f419347d30f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: display_pdf
+label: 'display pdf'
+type: 'canonical_entities:node'
+pattern: '%/display-pdf'
+view_mode: pdf
+selection_criteria:
+  987f2df9-007d-4771-bfe2-711f6f5d15aa:
+    id: node_type
+    bundles:
+      stockrequest: stockrequest
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 987f2df9-007d-4771-bfe2-711f6f5d15aa
+selection_logic: and
+weight: -5
+relationships: {  }

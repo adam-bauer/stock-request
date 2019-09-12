@@ -1,0 +1,21 @@
+uuid: 2ad9846a-23da-4865-8654-58cdff8be259
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_billing_and_shipping_info
+    - node.type.stockrequest
+id: node.stockrequest.field_billing_and_shipping_info
+field_name: field_billing_and_shipping_info
+entity_type: node
+bundle: stockrequest
+label: 'Billing and Shipping Info'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ' '
+default_value_callback: ''
+settings: {  }
+field_type: string_long

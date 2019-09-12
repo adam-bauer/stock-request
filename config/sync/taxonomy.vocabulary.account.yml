@@ -1,0 +1,8 @@
+uuid: 19663c19-1ff7-44b8-9f54-a2503c082a68
+langcode: en
+status: true
+dependencies: {  }
+name: Account
+vid: account
+description: ''
+weight: 0

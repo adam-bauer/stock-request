@@ -1,0 +1,23 @@
+uuid: f49096be-4237-485d-a628-07400aad23cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.feeds_item
+    - taxonomy.vocabulary.accounting_template
+  module:
+    - feeds
+id: taxonomy_term.accounting_template.feeds_item
+field_name: feeds_item
+entity_type: taxonomy_term
+bundle: accounting_template
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

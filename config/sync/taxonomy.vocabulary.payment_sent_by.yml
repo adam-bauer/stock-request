@@ -1,0 +1,8 @@
+uuid: 0b16eb9b-881d-4ea0-aa8f-1e81640b41e7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Payment Sent By'
+vid: payment_sent_by
+description: ''
+weight: 0

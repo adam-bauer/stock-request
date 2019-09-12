@@ -1,0 +1,100 @@
+uuid: b50bc154-5dba-46b3-ac4b-d0fea7cd81f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.items_to_order_financial_
+    - field.field.paragraph.items_to_order.field_description
+    - field.field.paragraph.items_to_order.field_extended_cost
+    - field.field.paragraph.items_to_order.field_items_received
+    - field.field.paragraph.items_to_order.field_quantity
+    - field.field.paragraph.items_to_order.field_recieved
+    - field.field.paragraph.items_to_order.field_unit_cost
+    - field.field.paragraph.items_to_order.field_units
+    - paragraphs.paragraphs_type.items_to_order
+  module:
+    - computed_field
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked
+      library: ds/ds_2col_stacked
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_description
+      right:
+        - field_quantity
+        - field_units
+        - field_unit_cost
+        - field_extended_cost
+id: paragraph.items_to_order.items_to_order_financial_
+targetEntityType: paragraph
+bundle: items_to_order
+mode: items_to_order_financial_
+content:
+  field_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: left
+  field_extended_cost:
+    weight: 4
+    label: inline
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: computed_decimal
+    region: right
+  field_quantity:
+    weight: 1
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: right
+  field_unit_cost:
+    weight: 3
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: number_unformatted
+    region: right
+  field_units:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: right
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_items_received: true
+  field_recieved: true

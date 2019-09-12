@@ -1,0 +1,64 @@
+uuid: 98aa4266-0b78-49a6-931e-cdfbaf233e20
+langcode: en
+status: true
+dependencies: {  }
+id: send_email_to_grants
+label: 'send email to grants'
+events:
+  -
+    event_name: 'rules_entity_insert:content_moderation_state'
+description: ''
+tags:
+  - ''
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: f636e20b-3747-4590-a1bc-a355b7e859dc
+  conditions:
+    id: rules_and
+    uuid: c3d05799-7c73-4959-b067-2036ccd41187
+    conditions:
+      -
+        id: rules_condition
+        uuid: 0ba73739-83fa-4bbb-83bf-6d18b7bd4412
+        context_values:
+          operation: '=='
+          value: send_to_purchasing
+        context_mapping:
+          data: content_moderation_state
+        context_processors:
+          operation:
+            rules_tokens: {  }
+          value:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_data_comparison
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: 484e476f-3205-422b-8f47-ce00d5560ecb
+    actions:
+      -
+        id: rules_action
+        uuid: 93e4b775-61d0-4458-8d2c-699019588369
+        context_values:
+          to:
+            - adam.bauer@avtec.edu
+          subject: 'moderation state changed to purchase'
+          message: 'sent to purchasing'
+          reply: ''
+          language: ''
+        context_mapping: {  }
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email

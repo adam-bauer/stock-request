@@ -1,0 +1,22 @@
+uuid: 6d895213-08d9-414c-944c-9978f04963e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - avtec
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: avtec_help
+theme: avtec
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

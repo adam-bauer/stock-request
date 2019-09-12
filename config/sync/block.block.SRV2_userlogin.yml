@@ -1,0 +1,27 @@
+uuid: 9aaa557d-781b-4694-88c0-719c153cc5d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - SRV2
+id: SRV2_userlogin
+theme: SRV2
+region: header
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

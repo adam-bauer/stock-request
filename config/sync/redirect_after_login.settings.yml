@@ -1,0 +1,12 @@
+login_redirection:
+  anonymous: null
+  authenticated: /
+  departmenthead: /state/Department-head
+  accountingdirector: /state/accounting
+  deputydirector: /state/deputy-director
+  director: /state/director
+  interimdirector: /state/deputy-director
+  purchasingagent: /state/purchasing
+  accountspayable: /state/accounts-payable
+  administrator: /admin
+  approve: /

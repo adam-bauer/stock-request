@@ -1,0 +1,29 @@
+uuid: 73dff740-ad75-4f29-8ea8-576ce9ca0a24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accounting_template
+    - paragraphs.paragraphs_type.financial_coding
+    - taxonomy.vocabulary.accounting_template
+id: paragraph.financial_coding.field_accounting_template
+field_name: field_accounting_template
+entity_type: paragraph
+bundle: financial_coding
+label: 'Accounting Template'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      accounting_template: accounting_template
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 6cb210fc-3f57-4811-a60d-cf375a7d0775
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - avtec
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: avtec_messages
+theme: avtec
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

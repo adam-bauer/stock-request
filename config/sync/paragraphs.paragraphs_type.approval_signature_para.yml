@@ -1,0 +1,9 @@
+uuid: 86c60e3d-6dcf-4431-bf28-d20828547af5
+langcode: en
+status: true
+dependencies: {  }
+id: approval_signature_para
+label: 'Approval Signature'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,14 @@
+uuid: a5a9b9e5-357b-454d-a44b-ccd4ee645d5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.accountspayable
+  module:
+    - user
+id: user_remove_role_action.accountspayable
+label: 'Remove the AccountsPayable role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: accountspayable

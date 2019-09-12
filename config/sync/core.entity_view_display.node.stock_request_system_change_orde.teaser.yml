@@ -1,0 +1,39 @@
+uuid: 4025e2b2-703e-476b-9ba8-1a4e9aca7b37
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.stock_request_system_change_orde.body
+    - field.field.node.stock_request_system_change_orde.field_change_order_status
+    - field.field.node.stock_request_system_change_orde.field_request_date
+    - field.field.node.stock_request_system_change_orde.field_requesting_user_
+    - node.type.stock_request_system_change_orde
+  module:
+    - text
+    - user
+id: node.stock_request_system_change_orde.teaser
+targetEntityType: node
+bundle: stock_request_system_change_orde
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_change_order_status: true
+  field_request_date: true
+  field_requesting_user_: true

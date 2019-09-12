@@ -1,0 +1,19 @@
+uuid: 16d177bc-9c07-4caa-8346-b14077b6df96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_units
+    - paragraphs.paragraphs_type.items_to_order
+id: paragraph.items_to_order.field_units
+field_name: field_units
+entity_type: paragraph
+bundle: items_to_order
+label: Units
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

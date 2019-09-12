@@ -1,0 +1,22 @@
+uuid: 2ccda24b-01a4-4864-8621-ed86b63eec3b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - avtec
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: avtec_local_tasks
+theme: avtec
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

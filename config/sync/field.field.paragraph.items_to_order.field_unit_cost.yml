@@ -1,0 +1,23 @@
+uuid: a0d2bd05-8ac6-4c64-bb23-74c606f8368c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_unit_cost
+    - paragraphs.paragraphs_type.items_to_order
+id: paragraph.items_to_order.field_unit_cost
+field_name: field_unit_cost
+entity_type: paragraph
+bundle: items_to_order
+label: 'Unit Cost'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

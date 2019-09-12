@@ -1,0 +1,222 @@
+uuid: 969eec9f-845c-4c8b-8fd1-8022e42e6bb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.stockrequest
+  enforced:
+    config:
+      0: workbench_email.workbench_email_template.send_to_department_head
+      2: workbench_email.workbench_email_template.send_to_accounting
+      5: workbench_email.workbench_email_template.send_to_deputy_director
+      9: workbench_email.workbench_email_template.send_to_director
+      14: workbench_email.workbench_email_template.send_to_purchasing
+      20: workbench_email.workbench_email_template.send_to_accounts_payable
+      27: workbench_email.workbench_email_template.return_to_creator
+  module:
+    - content_moderation
+    - workbench_email
+third_party_settings:
+  workbench_email:
+    workbench_email_templates:
+      send_to_department_head:
+        send_to_department_head: send_to_department_head
+      send_to_accounting:
+        send_to_accounting: send_to_accounting
+      send_to_deputy_director:
+        send_to_deputy_director: send_to_deputy_director
+      send_to_director:
+        send_to_director: send_to_director
+      send_to_purchasing:
+        send_to_purchasing: send_to_purchasing
+      send_to_accounts_payable:
+        send_to_accounts_payable: send_to_accounts_payable
+      return_to_creator:
+        return_to_creator: return_to_creator
+      publish: {  }
+      create_new_draft: {  }
+      send_to_archive: {  }
+id: stockrequest
+label: Stockrequest
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -6
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: -5
+    return_to_creator:
+      published: true
+      default_revision: true
+      label: 'Return to Creator'
+      weight: -4
+    send_to_accounting:
+      published: true
+      default_revision: true
+      label: 'Send to Accounting'
+      weight: -2
+    send_to_accounts_payable:
+      published: true
+      default_revision: true
+      label: 'Send to Accounts Payable'
+      weight: 3
+    send_to_archive:
+      published: true
+      default_revision: true
+      label: 'Send to Archive'
+      weight: 4
+    send_to_department_head:
+      published: true
+      default_revision: true
+      label: 'Send to Department Head'
+      weight: -3
+    send_to_deputy_director:
+      published: true
+      default_revision: true
+      label: 'Send to Deputy Director'
+      weight: -1
+    send_to_director:
+      published: true
+      default_revision: true
+      label: 'Send to Director'
+      weight: 0
+    send_to_interim_director:
+      published: true
+      default_revision: true
+      label: 'Send to Interim Director'
+      weight: 1
+    send_to_purchasing:
+      published: true
+      default_revision: true
+      label: 'Send to Purchasing'
+      weight: 2
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: -5
+      from:
+        - draft
+        - published
+        - send_to_accounting
+        - send_to_department_head
+    publish:
+      label: Publish
+      to: published
+      weight: -4
+      from:
+        - draft
+        - published
+        - send_to_accounting
+        - send_to_department_head
+    return_to_creator:
+      label: 'Return to Creator'
+      from:
+        - published
+        - send_to_accounting
+        - send_to_accounts_payable
+        - send_to_department_head
+        - send_to_deputy_director
+        - send_to_director
+        - send_to_interim_director
+        - send_to_purchasing
+      to: return_to_creator
+      weight: 5
+    send_to_accounting:
+      label: 'Send to Accounting'
+      from:
+        - draft
+        - published
+        - return_to_creator
+        - send_to_accounting
+        - send_to_accounts_payable
+        - send_to_archive
+        - send_to_department_head
+        - send_to_deputy_director
+        - send_to_director
+        - send_to_interim_director
+        - send_to_purchasing
+      to: send_to_accounting
+      weight: -1
+    send_to_accounts_payable:
+      label: 'Send to Accounts Payable'
+      from:
+        - return_to_creator
+        - send_to_accounting
+        - send_to_accounts_payable
+        - send_to_purchasing
+      to: send_to_accounts_payable
+      weight: 3
+    send_to_archive:
+      label: 'Send to Archive'
+      from:
+        - send_to_accounting
+        - send_to_accounts_payable
+        - send_to_purchasing
+      to: send_to_archive
+      weight: 4
+    send_to_department_head:
+      label: 'Send to Department Head'
+      from:
+        - draft
+        - published
+        - return_to_creator
+        - send_to_accounting
+        - send_to_accounts_payable
+        - send_to_department_head
+        - send_to_deputy_director
+        - send_to_director
+        - send_to_interim_director
+        - send_to_purchasing
+      to: send_to_department_head
+      weight: -2
+    send_to_deputy_director:
+      label: 'Send to Deputy Director'
+      from:
+        - return_to_creator
+        - send_to_accounting
+        - send_to_accounts_payable
+        - send_to_department_head
+        - send_to_deputy_director
+        - send_to_director
+        - send_to_interim_director
+        - send_to_purchasing
+      to: send_to_deputy_director
+      weight: 0
+    send_to_director:
+      label: 'Send to Director'
+      from:
+        - return_to_creator
+        - send_to_accounting
+        - send_to_accounts_payable
+        - send_to_department_head
+        - send_to_deputy_director
+        - send_to_director
+        - send_to_interim_director
+        - send_to_purchasing
+      to: send_to_director
+      weight: 1
+    send_to_purchasing:
+      label: 'Send to Purchasing'
+      from:
+        - return_to_creator
+        - send_to_accounting
+        - send_to_accounts_payable
+        - send_to_archive
+        - send_to_department_head
+        - send_to_deputy_director
+        - send_to_director
+        - send_to_interim_director
+        - send_to_purchasing
+      to: send_to_purchasing
+      weight: 2
+  entity_types:
+    node:
+      - stockrequest
+  default_moderation_state: draft

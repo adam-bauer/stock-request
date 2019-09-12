@@ -1,0 +1,26 @@
+uuid: 5171b6e4-088d-4fd6-bd2f-495608febf8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_financial_coding_value
+    - node.type.stockrequest
+  module:
+    - computed_field
+id: node.stockrequest.field_financial_coding_value
+field_name: field_financial_coding_value
+entity_type: node
+bundle: stockrequest
+label: 'Financial Coding Value'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  code: "$node = \\Drupal::routeMatch()->getParameter('node');\r\n$my_financials = null;\r\n$total_financials = 0;\r\n\r\n$check_ = $node ? 1 : 0;\r\nif($check_ != 0){\r\n\tforeach ($node->get('field_financial_coding') as $para) {\r\n\t\tif ($para->entity->getType() == 'financial_coding') {   \r\n\t\t\t$my_financials = $para->entity;\r\n\t\t}\r\n\t\tif (!empty($my_financials)) {\r\n\t\t\t// $my_financials is a regular entity and can be interacted with like any other entity\r\n\t\t\t$total_financials = $total_financials + $my_financials->field_amount->value;\r\n\t\t} else{$total_financials = 10000;}\r\n\t}\r\n}else{$total_financials = 10000;}\r\n\r\n$value = $total_financials;"
+  prefix: $
+  suffix: ''
+field_type: computed_float

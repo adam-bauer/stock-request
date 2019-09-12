@@ -1,0 +1,8 @@
+uuid: 74f41c5e-0787-4d25-989f-2f0ea9169bda
+langcode: en
+status: true
+dependencies: {  }
+name: 'Payment Status'
+vid: payment_status
+description: ''
+weight: 0

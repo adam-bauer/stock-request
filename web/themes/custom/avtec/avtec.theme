@@ -1,0 +1,15 @@
+<?php
+use Drupal\paragraphs\Entity\Paragraph;
+
+function avtec_preprocess_field(&$variables) {
+    if($variables['field_name'] == 'field_items_to_order'){
+
+     foreach($variables['items'] as $idx => $item) {
+        $variables['items'][$idx]['content']['#paragraph']->index = $idx;
+      }
+    }
+}
+function avtec_preprocess_html(&$variables) {
+  $current_path = \Drupal::service('path.current')->getPath();
+  $variables['current_path'] = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+}

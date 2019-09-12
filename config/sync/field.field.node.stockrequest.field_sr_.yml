@@ -1,0 +1,21 @@
+uuid: 3babbb12-d9a1-4ef3-a05f-6130b4ec7d13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sr_
+    - node.type.stockrequest
+id: node.stockrequest.field_sr_
+field_name: field_sr_
+entity_type: node
+bundle: stockrequest
+label: 'SR #'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 719AVC
+default_value_callback: ''
+settings: {  }
+field_type: string

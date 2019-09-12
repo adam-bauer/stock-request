@@ -1,0 +1,23 @@
+uuid: 0fd02fc8-55ae-4d9e-a31b-109e3874cbbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_web_site
+    - taxonomy.vocabulary.vendors
+  module:
+    - link
+id: taxonomy_term.vendors.field_web_site
+field_name: field_web_site
+entity_type: taxonomy_term
+bundle: vendors
+label: 'Web site'
+description: "<p>It is usually best to copy the website address from the address bar when you visit the site and then paste it into the URL Box here<p>\r\n<p>be sure to include the \"http(s)://\" part of the address</p>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

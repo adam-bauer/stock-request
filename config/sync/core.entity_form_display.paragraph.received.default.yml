@@ -1,0 +1,41 @@
+uuid: 45aa03e9-b23f-4280-a3a0-be29a520ca10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.received.field_date_received
+    - field.field.paragraph.received.field_invoice
+    - field.field.paragraph.received.field_qty
+    - paragraphs.paragraphs_type.received
+  module:
+    - datetime
+id: paragraph.received.default
+targetEntityType: paragraph
+bundle: received
+mode: default
+content:
+  field_date_received:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_invoice:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_qty:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

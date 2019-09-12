@@ -1,0 +1,13 @@
+uuid: 2463c7f8-f190-4f26-ae1f-2d03ba38b1c0
+langcode: en
+status: true
+dependencies: {  }
+id: departmenthead
+label: DepartmentHead
+weight: -8
+is_admin: null
+permissions:
+  - 'delete paragraph content items_to_order'
+  - 'edit any stockrequest content'
+  - 'update paragraph content items_to_order'
+  - 'view stockrequest revisions'

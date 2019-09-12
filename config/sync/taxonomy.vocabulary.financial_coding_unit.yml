@@ -1,0 +1,8 @@
+uuid: cb3146ba-4a49-4ca2-bf20-8e71a8ccd8d1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Financial Coding Unit'
+vid: financial_coding_unit
+description: ''
+weight: 0

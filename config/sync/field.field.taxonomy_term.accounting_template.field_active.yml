@@ -1,0 +1,23 @@
+uuid: f31c9450-47ab-475d-b610-9096270816b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_active
+    - taxonomy.vocabulary.accounting_template
+id: taxonomy_term.accounting_template.field_active
+field_name: field_active
+entity_type: taxonomy_term
+bundle: accounting_template
+label: Active
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,14 @@
+uuid: 4c540d60-4069-499e-a5e1-ccfefbad89a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.accountspayable
+  module:
+    - user
+id: user_add_role_action.accountspayable
+label: 'Add the AccountsPayable role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: accountspayable

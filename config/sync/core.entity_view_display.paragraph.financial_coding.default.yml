@@ -1,0 +1,89 @@
+uuid: d199ee3b-7e5e-4819-be71-db5f2ca57c13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.financial_coding.field_account
+    - field.field.paragraph.financial_coding.field_accounting_template
+    - field.field.paragraph.financial_coding.field_amount
+    - field.field.paragraph.financial_coding.field_fy
+    - paragraphs.paragraphs_type.financial_coding
+  module:
+    - ds
+    - field_group
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - group_coding
+        - field_fy
+        - field_account
+        - field_amount
+        - field_accounting_template
+  field_group:
+    group_coding:
+      children:
+        - field_fy
+        - field_account
+        - field_amount
+        - field_accounting_template
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Coding
+      region: content
+id: paragraph.financial_coding.default
+targetEntityType: paragraph
+bundle: financial_coding
+mode: default
+content:
+  field_account:
+    weight: 2
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_accounting_template:
+    weight: 4
+    label: above
+    settings:
+      view_mode: financial_coding_pdf
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_amount:
+    weight: 3
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_fy:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

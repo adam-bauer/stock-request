@@ -1,0 +1,14 @@
+uuid: 41f36454-f83d-46c6-a926-6a2635f627df
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.financial_pdf
+label: 'Financial PDF'
+targetEntityType: node
+cache: true

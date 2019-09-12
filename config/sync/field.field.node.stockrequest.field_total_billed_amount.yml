@@ -1,0 +1,26 @@
+uuid: 3ec08a68-46a9-4307-89da-1bab919916b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_total_billed_amount
+    - node.type.stockrequest
+  module:
+    - computed_field
+id: node.stockrequest.field_total_billed_amount
+field_name: field_total_billed_amount
+entity_type: node
+bundle: stockrequest
+label: 'Total Billed Amount'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  code: "$node = \\Drupal::routeMatch()->getParameter('node');\r\n$billed = null;\r\n$billedTotal = 0;\r\n$check_ = $node ? 1 : 0;\r\nif($check_ != 0){\r\n\r\n\tforeach ($node->get('field_vendor_invoice') as $para) {\r\n\t\tif ($para->entity->getType() == 'vendor_invoices') {   \r\n\t\t\t$billed = $para->entity;\r\n\t\t}else{$billedTotal = 0;}\r\n\t\tif (!empty($billed)) {\r\n\t\t\t// $billed is a regular entity and can be interacted with like any other entity\r\n\t\t\t$billedTotal = $billedTotal + $billed->field_billed_amount->value;\r\n\t\t}else{$billedTotal = 0;}\r\n\t}\r\n\r\n}else{$billedTotal = 0;}\r\n$value = round($billedTotal, 2);"
+  prefix: ''
+  suffix: ''
+field_type: computed_float
