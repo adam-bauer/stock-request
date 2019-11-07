@@ -1,0 +1,14 @@
+uuid: e1543a60-1ed3-4eb2-b31a-8f9c4a7fb1da
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - taxonomy
+third_party_settings:
+  lightning_core:
+    description: 'For display in the online stock request form'
+id: taxonomy_term.financial_coding_stock_request
+label: 'Financial Coding stock request'
+targetEntityType: taxonomy_term
+cache: true

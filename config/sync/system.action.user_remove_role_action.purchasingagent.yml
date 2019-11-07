@@ -1,0 +1,14 @@
+uuid: 45642e9f-cbaa-4e90-8362-c7932c2d43cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.purchasingagent
+  module:
+    - user
+id: user_remove_role_action.purchasingagent
+label: 'Remove the PurchasingAgent role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: purchasingagent

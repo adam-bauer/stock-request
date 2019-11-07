@@ -1,0 +1,114 @@
+uuid: d645d70f-e441-4d04-9732-57d18dd33fa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.items_to_order.field_description
+    - field.field.paragraph.items_to_order.field_extended_cost
+    - field.field.paragraph.items_to_order.field_items_received
+    - field.field.paragraph.items_to_order.field_quantity
+    - field.field.paragraph.items_to_order.field_recieved
+    - field.field.paragraph.items_to_order.field_unit_cost
+    - field.field.paragraph.items_to_order.field_units
+    - paragraphs.paragraphs_type.items_to_order
+  module:
+    - computed_field
+    - ds
+    - field_group
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_item
+        - field_quantity
+        - field_units
+        - field_unit_cost
+        - field_extended_cost
+        - field_description
+  field_group:
+    group_item:
+      children:
+        - field_quantity
+        - field_units
+        - field_unit_cost
+        - field_extended_cost
+        - field_description
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Item
+      region: hidden
+id: paragraph.items_to_order.default
+targetEntityType: paragraph
+bundle: items_to_order
+mode: default
+content:
+  field_description:
+    type: text_default
+    weight: 5
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_extended_cost:
+    type: computed_decimal
+    weight: 4
+    region: ds_content
+    label: inline
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_quantity:
+    weight: 1
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: ds_content
+  field_unit_cost:
+    type: number_unformatted
+    weight: 3
+    region: ds_content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_units:
+    type: string
+    weight: 2
+    region: ds_content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_items_received: true
+  field_recieved: true

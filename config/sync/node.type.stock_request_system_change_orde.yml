@@ -1,0 +1,18 @@
+uuid: 97dbc540-d00e-4014-b51a-1ff69f8f3586
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Stock Request System Change Order'
+type: stock_request_system_change_orde
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

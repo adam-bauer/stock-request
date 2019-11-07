@@ -1,0 +1,25 @@
+uuid: 41205753-1e71-4ee2-8693-e2fefe6c1ca6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_send_invite
+    - node.type.stockrequest
+  module:
+    - social_media
+id: node.stockrequest.field_send_invite
+field_name: field_send_invite
+entity_type: node
+bundle: stockrequest
+label: 'Send Invite'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: social_media

@@ -1,0 +1,19 @@
+uuid: 6f65924e-007a-4a6b-a9d1-eb715deadb6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_acc_
+    - taxonomy.vocabulary.vendors
+id: taxonomy_term.vendors.field_acc_
+field_name: field_acc_
+entity_type: taxonomy_term
+bundle: vendors
+label: 'ACC #'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

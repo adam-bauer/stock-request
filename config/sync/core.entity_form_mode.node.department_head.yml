@@ -1,0 +1,14 @@
+uuid: 78703cf7-f4de-4425-9c6e-9c80b5c3217b
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.department_head
+label: 'Department Head'
+targetEntityType: node
+cache: true

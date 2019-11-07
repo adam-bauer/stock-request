@@ -1,0 +1,37 @@
+uuid: 053ebe37-a0d0-4937-b6aa-395abbf9c055
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vendor_invoice
+    - node.type.stockrequest
+    - paragraphs.paragraphs_type.vendor_invoices
+  module:
+    - entity_reference_revisions
+id: node.stockrequest.field_vendor_invoice
+field_name: field_vendor_invoice
+entity_type: node
+bundle: stockrequest
+label: 'Vendor Invoice'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      vendor_invoices: vendor_invoices
+    target_bundles_drag_drop:
+      financial_coding:
+        weight: 4
+        enabled: false
+      items_to_order:
+        weight: 5
+        enabled: false
+      vendor_invoices:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

@@ -1,0 +1,14 @@
+uuid: b5383661-4b0c-47b6-b88d-e521fe5d5e0b
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - taxonomy
+third_party_settings:
+  lightning_core:
+    description: ''
+id: taxonomy_term.financial_coding_vendors_pdf
+label: 'Financial Coding VENDORS PDF'
+targetEntityType: taxonomy_term
+cache: true

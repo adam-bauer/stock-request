@@ -1,0 +1,30 @@
+uuid: 134da15d-faf2-4ecb-9d4f-8d258d36f1d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.stock_request_system_change_orde
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    php: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: node.stock_request_system_change_orde.body
+field_name: body
+entity_type: node
+bundle: stock_request_system_change_orde
+label: 'Change order request'
+description: "<P><b>Please provide a complete description of your request with as much detail as possible.</b></P>\r\n<p><i>All requests will be reviewed and a course of action will be determined by the appropriate personnel</i></p>"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

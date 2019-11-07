@@ -1,0 +1,14 @@
+uuid: 78b8d140-02b3-43ef-a2ce-93724383b95e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.purchasingagent
+  module:
+    - user
+id: user_add_role_action.purchasingagent
+label: 'Add the PurchasingAgent role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: purchasingagent

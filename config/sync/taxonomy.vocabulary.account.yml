@@ -1,0 +1,8 @@
+uuid: 19663c19-1ff7-44b8-9f54-a2503c082a68
+langcode: en
+status: true
+dependencies: {  }
+name: 'Object Codes'
+vid: account
+description: ''
+weight: 0

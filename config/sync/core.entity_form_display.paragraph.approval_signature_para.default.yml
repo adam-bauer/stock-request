@@ -1,0 +1,35 @@
+uuid: 43901c40-1f30-4fea-88ed-82a8249810ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.approval_signature_para.field_approval_date
+    - field.field.paragraph.approval_signature_para.field_approved_by_paragraph
+    - paragraphs.paragraphs_type.approval_signature_para
+  module:
+    - datetime
+    - viewsreference
+id: paragraph.approval_signature_para.default
+targetEntityType: paragraph
+bundle: approval_signature_para
+mode: default
+content:
+  field_approval_date:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_approved_by_paragraph:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: '60'
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

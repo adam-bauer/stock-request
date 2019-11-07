@@ -1,0 +1,14 @@
+uuid: 5be6f6c8-1a4c-4b6e-a7f5-0941e8fec442
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.items_to_order_financial_
+label: 'Items to Order Financial '
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,22 @@
+uuid: 98e98679-947a-421a-b451-6ec7582e9f0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - SRV2
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: SRV2_help
+theme: SRV2
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

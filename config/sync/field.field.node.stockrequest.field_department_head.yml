@@ -1,0 +1,37 @@
+uuid: 35468e75-c051-4baf-99e3-6bde65c03d82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department_head
+    - node.type.stockrequest
+id: node.stockrequest.field_department_head
+field_name: field_department_head
+entity_type: node
+bundle: stockrequest
+label: 'Department Head'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: role
+      role:
+        departmenthead: departmenthead
+        administrator: '0'
+        accountingdirector: '0'
+        director: '0'
+        deputydirector: '0'
+        interimdirector: '0'
+        purchasingagent: '0'
+        accountspayable: '0'
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

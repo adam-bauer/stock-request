@@ -1,0 +1,86 @@
+uuid: f971b228-36ce-4b9c-a184-3e096516c18a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.items_to_order.field_description
+    - field.field.paragraph.items_to_order.field_extended_cost
+    - field.field.paragraph.items_to_order.field_items_received
+    - field.field.paragraph.items_to_order.field_quantity
+    - field.field.paragraph.items_to_order.field_recieved
+    - field.field.paragraph.items_to_order.field_unit_cost
+    - field.field.paragraph.items_to_order.field_units
+    - paragraphs.paragraphs_type.items_to_order
+  module:
+    - allowed_formats
+    - computed_field
+    - paragraphs
+    - text
+id: paragraph.items_to_order.default
+targetEntityType: paragraph
+bundle: items_to_order
+mode: default
+content:
+  field_description:
+    weight: 5
+    settings:
+      rows: 1
+      placeholder: ''
+      summary_rows: 1
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+    type: text_textarea_with_summary
+    region: content
+  field_extended_cost:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: computed_number_widget
+    region: content
+  field_items_received:
+    type: entity_reference_paragraphs
+    weight: 7
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_quantity:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_recieved:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_unit_cost:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_units:
+    weight: 1
+    settings:
+      size: 12
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  status: true
+  uid: true

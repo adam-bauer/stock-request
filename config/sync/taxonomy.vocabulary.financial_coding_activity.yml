@@ -1,0 +1,8 @@
+uuid: 2dd70936-e76d-45bf-9b59-9671ebbd8bcd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Financial Coding Activity'
+vid: financial_coding_activity
+description: ''
+weight: 0

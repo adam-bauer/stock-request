@@ -1,0 +1,8 @@
+uuid: aae43b3d-eace-4663-8d94-9805f0ed0f16
+langcode: en
+status: true
+dependencies: {  }
+name: 'Purchasing Status'
+vid: purchasing_status
+description: ''
+weight: 0

@@ -1,0 +1,41 @@
+uuid: 731acf83-658f-4656-8179-2dfe13039173
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sidebar_info_for_edit
+  module:
+    - ctools
+    - user
+    - views
+  theme:
+    - avtec
+id: views_block__sidebar_info_for_edit_block_4
+theme: avtec
+region: sidebar_second
+weight: -4
+provider: null
+plugin: 'views_block:sidebar_info_for_edit-block_4'
+settings:
+  id: 'views_block:sidebar_info_for_edit-block_4'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      stockrequest: stockrequest
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  user_role:
+    id: user_role
+    roles:
+      departmenthead: departmenthead
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

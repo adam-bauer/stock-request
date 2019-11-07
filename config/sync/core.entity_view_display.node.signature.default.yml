@@ -1,0 +1,77 @@
+uuid: e043b6c4-ac12-4646-abfc-2ae5091e54b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.signature.field_appoved_by_signature
+    - field.field.node.signature.field_approved_by_name
+    - field.field.node.signature.field_approver_position
+    - node.type.signature
+  module:
+    - ds
+    - image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - links
+        - field_approved_by_name
+        - field_appoved_by_signature
+      right:
+        - field_approver_position
+        - field_approval_date
+id: node.signature.default
+targetEntityType: node
+bundle: signature
+mode: default
+content:
+  field_appoved_by_signature:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: left
+  field_approved_by_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: left
+  field_approver_position:
+    weight: 3
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: right
+  links:
+    weight: 0
+    region: left
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

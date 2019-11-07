@@ -1,0 +1,24 @@
+uuid: 04899ee5-051c-46f7-8495-c93ccf9d894f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_requested
+    - node.type.stockrequest
+  module:
+    - datetime
+id: node.stockrequest.field_date_requested
+field_name: field_date_requested
+entity_type: node
+bundle: stockrequest
+label: 'Date Requested'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

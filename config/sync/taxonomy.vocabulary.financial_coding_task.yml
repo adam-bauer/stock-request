@@ -1,0 +1,8 @@
+uuid: 22e7a9d1-f49c-4fe6-a006-20b7b6fe663d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Financial Coding Task'
+vid: financial_coding_task
+description: ''
+weight: 0

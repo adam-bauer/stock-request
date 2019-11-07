@@ -1,0 +1,26 @@
+uuid: 60f28f61-e6d1-44ff-88c8-97df744c5fa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_total_note
+    - node.type.stockrequest
+  module:
+    - markup
+id: node.stockrequest.field_total_note
+field_name: field_total_note
+entity_type: node
+bundle: stockrequest
+label: 'Total Note'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    markup: null
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><em>The Total estimated cost is computed from database values after the SR is saved. </em></p>\r\n\r\n<p><em>This field will only show a true value after the SR has been<strong> saved twice</strong>.</em></p>\r\n\r\n<p><em>Be advised changes made to item and shipping costs will not be immediately reflected in this total</em>.</p>\r\n"
+    format: basic_html
+field_type: markup

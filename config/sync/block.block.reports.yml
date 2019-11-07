@@ -1,0 +1,30 @@
+uuid: 019819d2-5026-4215-84d7-315b7cde4b98
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.reports
+  module:
+    - system
+  theme:
+    - avtec
+id: reports
+theme: avtec
+region: sidebar_second
+weight: -8
+provider: null
+plugin: 'system_menu_block:reports'
+settings:
+  id: 'system_menu_block:reports'
+  label: 'Quick Links'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: /bulk-edit-vendor
+    negate: true
+    context_mapping: {  }

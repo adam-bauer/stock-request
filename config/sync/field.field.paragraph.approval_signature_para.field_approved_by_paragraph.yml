@@ -1,0 +1,57 @@
+uuid: 21f73b43-ac25-4b4e-8c7d-61ea2d866e07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_approved_by_paragraph
+    - paragraphs.paragraphs_type.approval_signature_para
+  module:
+    - viewsreference
+id: paragraph.approval_signature_para.field_approved_by_paragraph
+field_name: field_approved_by_paragraph
+entity_type: paragraph
+bundle: approval_signature_para
+label: 'Approved by'
+description: "<p>Type \"Approval\" into \"Approved by\" box. Select \"Approval Signature (approval_signature)'</p>\r\n<p>Select the appropriate person in the Display ID drop down.</p>\r\n<p>Also be sure to fill in the “Approval Date”</p>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    page: page
+    default: 0
+    block: 0
+    entity_reference: 0
+    feed: 0
+  preselect_views:
+    approval_signature: approval_signature
+    block_content: 0
+    budget_remaining: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_recent: 0
+    dolog: 0
+    feeds_feed: 0
+    files: 0
+    financial_pdf: 0
+    frontpage: 0
+    instructions: 0
+    items_not_recieved: 0
+    moderated_content: 0
+    moderation_state_block: 0
+    moderation_state_change: 0
+    moderation_state_full_content: 0
+    request_not_approved: 0
+    stockrequest_status: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

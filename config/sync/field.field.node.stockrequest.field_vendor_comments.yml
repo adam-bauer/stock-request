@@ -1,0 +1,19 @@
+uuid: e0bc6ace-ac08-43b8-ad38-c5f95675ba50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vendor_comments
+    - node.type.stockrequest
+id: node.stockrequest.field_vendor_comments
+field_name: field_vendor_comments
+entity_type: node
+bundle: stockrequest
+label: 'Comments for Vendor'
+description: 'Optional Field for Comments to vendor, such as serial numbers on equipment. If used this field will be printed on the Purchase Order sent to the vendor.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

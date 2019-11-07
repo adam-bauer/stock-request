@@ -1,0 +1,418 @@
+uuid: d32f740b-f91d-4e22-8cd9-fe7081bbf462
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.purchasing
+    - field.field.node.stockrequest.field_approved_by
+    - field.field.node.stockrequest.field_attached_files
+    - field.field.node.stockrequest.field_balance_not_billed
+    - field.field.node.stockrequest.field_billing_and_shipping_info
+    - field.field.node.stockrequest.field_comments
+    - field.field.node.stockrequest.field_comments_for_darcie
+    - field.field.node.stockrequest.field_date_requested
+    - field.field.node.stockrequest.field_date_required
+    - field.field.node.stockrequest.field_department
+    - field.field.node.stockrequest.field_department_head
+    - field.field.node.stockrequest.field_enc
+    - field.field.node.stockrequest.field_field_financial_coding_di
+    - field.field.node.stockrequest.field_financial_coding
+    - field.field.node.stockrequest.field_financial_coding_value
+    - field.field.node.stockrequest.field_financial_report
+    - field.field.node.stockrequest.field_invite_note
+    - field.field.node.stockrequest.field_items_to_order
+    - field.field.node.stockrequest.field_justification
+    - field.field.node.stockrequest.field_payment_status
+    - field.field.node.stockrequest.field_phone
+    - field.field.node.stockrequest.field_purchasing_status
+    - field.field.node.stockrequest.field_requested_budget
+    - field.field.node.stockrequest.field_requesting_office
+    - field.field.node.stockrequest.field_resale_to_students
+    - field.field.node.stockrequest.field_send_invite
+    - field.field.node.stockrequest.field_ship_to_address
+    - field.field.node.stockrequest.field_shipping_cost
+    - field.field.node.stockrequest.field_sr_
+    - field.field.node.stockrequest.field_sr_heading
+    - field.field.node.stockrequest.field_total_balance_due
+    - field.field.node.stockrequest.field_total_billed_amount
+    - field.field.node.stockrequest.field_total_est_cost
+    - field.field.node.stockrequest.field_total_note
+    - field.field.node.stockrequest.field_vendor
+    - field.field.node.stockrequest.field_vendor_comments
+    - field.field.node.stockrequest.field_vendor_invoice
+    - node.type.stockrequest
+    - workflows.workflow.stockrequest
+  module:
+    - computed_field
+    - content_moderation
+    - datetime
+    - field_group
+    - file
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_items_to_order:
+      children:
+        - field_items_to_order
+        - field_payment_status
+      parent_name: group_edit_groups
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: items_to_order_field
+        classes: items_to_order_class
+        description: ''
+        required_fields: true
+        formatter: closed
+      label: 'Items to Order'
+      region: content
+    group_financial_coding:
+      children:
+        - field_financial_coding
+        - field_enc
+      parent_name: group_edit_groups
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: financial_coding_id
+        classes: financial_coding_class
+        description: ''
+        required_fields: true
+        formatter: closed
+      label: 'Financial Coding'
+      region: content
+    group_vendor_info:
+      children:
+        - field_vendor
+        - field_vendor_comments
+      parent_name: group_edit_groups
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: vendor_info_id
+        classes: vendor_info_class
+        description: ''
+        required_fields: true
+        formatter: closed
+      label: 'Vendor Info'
+      region: content
+    group_department_information:
+      children:
+        - field_department
+        - field_department_head
+        - field_date_requested
+        - field_date_required
+        - field_requested_budget
+      parent_name: group_edit_groups
+      weight: 2
+      format_type: tab
+      format_settings:
+        description: ''
+        formatter: open
+        required_fields: true
+        id: dept_info_id
+        classes: dept_info_class
+      label: 'Dept Info'
+      region: content
+    group_approval:
+      children:
+        - field_approved_by
+      parent_name: group_edit_groups
+      weight: 6
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+        formatter: closed
+      label: Approval
+      region: content
+    group_order_infor:
+      children:
+        - field_justification
+        - field_resale_to_students
+        - field_shipping_cost
+        - field_billing_and_shipping_info
+        - field_attached_files
+      parent_name: group_edit_groups
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        formatter: closed
+      label: 'Order Information'
+      region: content
+    group_invoices:
+      children:
+        - field_vendor_invoice
+      parent_name: group_edit_groups
+      weight: 8
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        formatter: closed
+      label: Invoices
+      region: content
+    group_edit_groups:
+      children:
+        - group_department_information
+        - group_vendor_info
+        - group_items_to_order
+        - group_order_infor
+        - group_approval
+        - group_financial_coding
+        - group_invoices
+      parent_name: ''
+      weight: 3
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: 'Edit Groups'
+      region: content
+id: node.stockrequest.purchasing
+targetEntityType: node
+bundle: stockrequest
+mode: purchasing
+content:
+  field_approved_by:
+    type: entity_reference_paragraphs
+    weight: 43
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_attached_files:
+    weight: 16
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_balance_not_billed:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: computed_number_widget
+    region: content
+  field_billing_and_shipping_info:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_date_requested:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_required:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_department:
+    weight: 29
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_department_head:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_enc:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_field_financial_coding_di:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: computed_number_widget
+    region: content
+  field_financial_coding:
+    type: entity_reference_paragraphs
+    weight: 29
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_financial_coding_value:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: computed_number_widget
+    region: content
+  field_items_to_order:
+    type: entity_reference_paragraphs
+    weight: 29
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_justification:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_payment_status:
+    type: entity_reference_paragraphs
+    weight: 30
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_purchasing_status:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_requested_budget:
+    weight: 33
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_resale_to_students:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_shipping_cost:
+    weight: 13
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_sr_:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sr_heading:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_vendor:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_vendor_comments:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_vendor_invoice:
+    type: entity_reference_paragraphs
+    weight: 38
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_comments: true
+  field_comments_for_darcie: true
+  field_financial_report: true
+  field_invite_note: true
+  field_phone: true
+  field_requesting_office: true
+  field_send_invite: true
+  field_ship_to_address: true
+  field_total_balance_due: true
+  field_total_billed_amount: true
+  field_total_est_cost: true
+  field_total_note: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

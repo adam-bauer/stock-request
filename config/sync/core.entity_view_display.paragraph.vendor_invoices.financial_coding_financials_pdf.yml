@@ -1,0 +1,98 @@
+uuid: 8c57369f-fb03-44c4-b588-eafd903c6a1d
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.financial_coding_financials_pdf
+    - field.field.paragraph.vendor_invoices.field_ad_ef_pr_
+    - field.field.paragraph.vendor_invoices.field_billed_amount
+    - field.field.paragraph.vendor_invoices.field_date_paid
+    - field.field.paragraph.vendor_invoices.field_invoice_date
+    - field.field.paragraph.vendor_invoices.field_invoice_number
+    - field.field.paragraph.vendor_invoices.field_sent_to_juneau
+    - paragraphs.paragraphs_type.vendor_invoices
+  module:
+    - datetime
+    - field_group
+third_party_settings:
+  field_group:
+    group_invoice:
+      children:
+        - field_invoice_number
+        - field_invoice_date
+        - field_sent_to_juneau
+        - field_date_paid
+        - field_ad_ef_pr_
+        - field_billed_amount
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Invoice
+      region: content
+id: paragraph.vendor_invoices.financial_coding_financials_pdf
+targetEntityType: paragraph
+bundle: vendor_invoices
+mode: financial_coding_financials_pdf
+content:
+  field_ad_ef_pr_:
+    weight: 5
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_billed_amount:
+    weight: 6
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_date_paid:
+    weight: 4
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_invoice_date:
+    weight: 2
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_invoice_number:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sent_to_juneau:
+    weight: 3
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

@@ -1,0 +1,26 @@
+uuid: e44f8527-7566-43e6-93c1-8081d175ecc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_invite_note
+    - node.type.stockrequest
+  module:
+    - markup
+id: node.stockrequest.field_invite_note
+field_name: field_invite_note
+entity_type: node
+bundle: stockrequest
+label: 'Invite Note'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    markup: null
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>Email an AVTEC staff member to review this SR. A link back to this page will be included.</p>\r\n"
+    format: basic_html
+field_type: markup

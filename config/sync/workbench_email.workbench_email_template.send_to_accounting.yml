@@ -1,0 +1,21 @@
+uuid: 7911bd89-0cab-4727-aa88-874a16081032
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.stockrequest
+id: send_to_accounting
+label: 'Send to Accounting'
+subject: 'There is a Stock Request waiting for review by Accounting'
+recipient_types:
+  fixed_email:
+    id: fixed_email
+    provider: workbench_email
+    status: true
+    settings:
+      recipients: darcie.larson@avtec.edu
+bundles:
+  'node:stockrequest': 'node:stockrequest'
+body:
+  value: "There is a new stock request for your review\r\n [node:title]\r\n [node:url]"
+  format: plain_text

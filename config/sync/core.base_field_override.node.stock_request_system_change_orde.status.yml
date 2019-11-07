@@ -1,0 +1,22 @@
+uuid: e7857ecb-e3c2-4056-b501-ae1fa131d302
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.stock_request_system_change_orde
+id: node.stock_request_system_change_orde.status
+field_name: status
+entity_type: node
+bundle: stock_request_system_change_orde
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

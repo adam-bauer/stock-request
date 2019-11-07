@@ -1,0 +1,14 @@
+uuid: 27ca060d-81b4-40cb-b881-019e1ae31433
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.financial_coding_financials_pdf
+label: 'Financial Coding Financials PDF'
+targetEntityType: paragraph
+cache: true

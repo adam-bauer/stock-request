@@ -1,0 +1,26 @@
+uuid: 118025b8-7cc5-4a38-9f7e-912b2c5b5f41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_balance_not_billed
+    - node.type.stockrequest
+  module:
+    - computed_field
+id: node.stockrequest.field_balance_not_billed
+field_name: field_balance_not_billed
+entity_type: node
+bundle: stockrequest
+label: 'Balance not billed'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  code: "$balance = 0;\r\n$billedTotal = 0;\r\n$TotalCost = 0;\r\n$node = \\Drupal::routeMatch()->getParameter('node');\r\n$check_ = $node ? 1 : 0;\r\nif($check_ != 0){\r\n  $TotalCost = $node->get('field_total_est_cost')->value;\r\n  $billedTotal = $node->get('field_total_billed_amount')->value;\r\n  $balance = round(($TotalCost - $billedTotal),2);\r\n}else{$balance = 10000;}\r\n  $value = $balance;"
+  prefix: $
+  suffix: ''
+field_type: computed_float

@@ -1,0 +1,26 @@
+uuid: e14a29be-5587-4398-9209-107f17934740
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_extended_cost
+    - paragraphs.paragraphs_type.items_to_order
+  module:
+    - computed_field
+id: paragraph.items_to_order.field_extended_cost
+field_name: field_extended_cost
+entity_type: paragraph
+bundle: items_to_order
+label: 'Ext Cost'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  code: '$value = $entity->field_quantity->value * $entity->field_unit_cost->value;'
+  prefix: ''
+  suffix: ''
+field_type: computed_float

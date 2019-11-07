@@ -1,0 +1,23 @@
+uuid: 099ebfa5-0137-4cee-a8cd-0f5cc08d373d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_billed_amount
+    - paragraphs.paragraphs_type.vendor_invoices
+id: paragraph.vendor_invoices.field_billed_amount
+field_name: field_billed_amount
+entity_type: paragraph
+bundle: vendor_invoices
+label: Amount
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: float

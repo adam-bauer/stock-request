@@ -1,0 +1,29 @@
+uuid: 49a52baa-7716-48d8-a4e8-4c5a316e4a18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_activity
+    - taxonomy.vocabulary.accounting_template
+    - taxonomy.vocabulary.financial_coding_activity
+id: taxonomy_term.accounting_template.field_activity
+field_name: field_activity
+entity_type: taxonomy_term
+bundle: accounting_template
+label: Activity
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      financial_coding_activity: financial_coding_activity
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

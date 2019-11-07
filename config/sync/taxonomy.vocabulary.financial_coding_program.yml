@@ -1,0 +1,8 @@
+uuid: 7fa183c2-3714-4cf6-bc7e-e1e8c3422efa
+langcode: en
+status: true
+dependencies: {  }
+name: 'Financial Coding Program'
+vid: financial_coding_program
+description: ''
+weight: 0

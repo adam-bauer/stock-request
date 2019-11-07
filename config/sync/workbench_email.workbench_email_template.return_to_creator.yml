@@ -1,0 +1,20 @@
+uuid: 2832ec10-aa78-4738-a219-4c4922187491
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.stockrequest
+id: return_to_creator
+label: 'Return to Creator'
+subject: 'A stock request you submitted has been returned'
+recipient_types:
+  author:
+    id: author
+    provider: workbench_email
+    status: true
+    settings: {  }
+bundles:
+  'node:stockrequest': 'node:stockrequest'
+body:
+  value: "Please take a look at this stock request\r\n [node:title]\r\n [node:url]"
+  format: plain_text

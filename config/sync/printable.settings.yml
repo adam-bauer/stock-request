@@ -1,0 +1,40 @@
+printable_entities:
+  block: '0'
+  block_content: '0'
+  comment: '0'
+  contact_message: '0'
+  content_moderation_state: '0'
+  feeds_subscription: '0'
+  feeds_feed: '0'
+  file: '0'
+  node: '0'
+  shortcut: '0'
+  taxonomy_term: '0'
+  tour: '0'
+  user: '0'
+  menu_link_content: '0'
+  paragraph: '0'
+open_target_blank: false
+css_include: ''
+extract_links: '0'
+save_pdf: true
+pdf_tool: wkhtmltopdf
+paper_size: A4
+page_orientation: portrait
+path_to_binary: ''
+pdf_location: ''
+send_to_printer: false
+close_window: false
+list_attribute: true
+printable_print_link_locations:
+  node: '0'
+  comment: '0'
+  user: '0'
+printable_pdf_link_locations:
+  - ''
+print_pdf_use_xvfb_run: 0
+path_to_xvfb_run: ''
+_core:
+  default_config_hash: '--64pTFtZ_ATDgWZMzTVtdhWcYJcq7fvQT9fZn3UCOU'
+ignore_warnings: 0
+path_to_xfb_run: ''

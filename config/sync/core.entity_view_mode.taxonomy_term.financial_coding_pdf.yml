@@ -1,0 +1,14 @@
+uuid: 1a922b3b-17f1-4153-af6c-2937300c99f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - taxonomy
+third_party_settings:
+  lightning_core:
+    description: ''
+id: taxonomy_term.financial_coding_pdf
+label: 'Financial Coding PDF'
+targetEntityType: taxonomy_term
+cache: true

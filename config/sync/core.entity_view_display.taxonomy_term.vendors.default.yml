@@ -1,0 +1,116 @@
+uuid: 66e6062f-1a75-4322-be8c-9859d373079b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.vendors.feeds_item
+    - field.field.taxonomy_term.vendors.field_acc_
+    - field.field.taxonomy_term.vendors.field_address
+    - field.field.taxonomy_term.vendors.field_city
+    - field.field.taxonomy_term.vendors.field_fax
+    - field.field.taxonomy_term.vendors.field_phone
+    - field.field.taxonomy_term.vendors.field_pvn
+    - field.field.taxonomy_term.vendors.field_state
+    - field.field.taxonomy_term.vendors.field_vendor_email
+    - field.field.taxonomy_term.vendors.field_web_site
+    - field.field.taxonomy_term.vendors.field_zip_code
+    - taxonomy.vocabulary.vendors
+  module:
+    - link
+id: taxonomy_term.vendors.default
+targetEntityType: taxonomy_term
+bundle: vendors
+mode: default
+content:
+  field_acc_:
+    weight: 9
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_address:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_city:
+    weight: 1
+    label: inline
+    settings:
+      link: false
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_fax:
+    weight: 5
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone:
+    weight: 4
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pvn:
+    weight: 8
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_state:
+    weight: 2
+    label: inline
+    settings:
+      link: false
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_vendor_email:
+    weight: 6
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_web_site:
+    weight: 7
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_zip_code:
+    weight: 3
+    label: inline
+    settings:
+      link: false
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  description: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true

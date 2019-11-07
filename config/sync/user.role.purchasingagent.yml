@@ -1,0 +1,50 @@
+uuid: 9d6d3676-37b6-4e95-b5b7-22ddf33a8bce
+langcode: en
+status: true
+dependencies: {  }
+id: purchasingagent
+label: PurchasingAgent
+weight: -3
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'access in-place editing'
+  - 'create field_date'
+  - 'create field_items_received'
+  - 'create field_payment_status'
+  - 'create field_purchasing_status'
+  - 'create field_recieved'
+  - 'create field_sr_'
+  - 'create paragraph content financial_coding'
+  - 'create paragraph content payment_status'
+  - 'create paragraph content received'
+  - 'create paragraph content vendor_invoices'
+  - 'delete any stockrequest content'
+  - 'delete paragraph content financial_coding'
+  - 'delete paragraph content items_to_order'
+  - 'delete paragraph content payment_status'
+  - 'delete paragraph content received'
+  - 'delete paragraph content vendor_invoices'
+  - 'delete terms in vendors'
+  - 'edit any stockrequest content'
+  - 'edit field_date'
+  - 'edit field_items_received'
+  - 'edit field_payment_status'
+  - 'edit field_purchasing_status'
+  - 'edit field_recieved'
+  - 'edit field_sr_'
+  - 'revert stockrequest revisions'
+  - 'update paragraph content financial_coding'
+  - 'update paragraph content items_to_order'
+  - 'update paragraph content payment_status'
+  - 'update paragraph content received'
+  - 'update paragraph content vendor_invoices'
+  - 'use node.purchasing form mode'
+  - 'use save and edit'
+  - 'use stockrequest transition send_to_accounting'
+  - 'use stockrequest transition send_to_accounts_payable'
+  - 'use stockrequest transition send_to_deputy_director'
+  - 'use stockrequest transition send_to_director'
+  - 'use stockrequest transition send_to_purchasing'
+  - 'view field_vendor_invoice'
+  - 'view paragraph content vendor_invoices'

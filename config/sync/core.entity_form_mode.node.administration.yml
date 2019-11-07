@@ -1,0 +1,14 @@
+uuid: d96b338a-c534-43ac-9984-cc03d86133c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.administration
+label: Administration
+targetEntityType: node
+cache: true

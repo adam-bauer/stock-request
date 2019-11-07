@@ -1,0 +1,14 @@
+uuid: 89e1971e-3a57-4a6c-9e4b-e2f8a9f4927a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.accountingdirector
+  module:
+    - user
+id: user_remove_role_action.accountingdirector
+label: 'Remove the AccountingDirector role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: accountingdirector
