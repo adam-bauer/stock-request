@@ -1,9 +1,0 @@
-uuid: 19a4b47a-8c17-4e8b-a65f-8dbd3525f107
-langcode: en
-status: true
-dependencies: {  }
-id: received
-label: Received
-icon_uuid: null
-description: 'Partial orders received'
-behavior_plugins: {  }

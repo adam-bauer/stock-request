@@ -1,8 +1,0 @@
-uuid: 4e3ff174-e708-4315-8c68-553061333674
-langcode: en
-status: true
-dependencies: {  }
-name: 'zip codes'
-vid: zip_codes
-description: ''
-weight: 0

@@ -1,9 +1,0 @@
-uuid: 888ba272-4670-497e-85fa-1fcf6744b903
-langcode: en
-status: true
-dependencies: {  }
-id: financial_coding
-label: 'Financial Coding'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

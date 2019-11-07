@@ -1,9 +1,0 @@
-uuid: 5bb4f45e-aeaa-4863-b31d-b2a86d96d758
-langcode: en
-status: true
-dependencies: {  }
-id: vendor_invoices
-label: 'Vendor Invoices'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

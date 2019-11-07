@@ -1,8 +1,0 @@
-uuid: 9f2962a6-a193-491c-a150-814b1784fd94
-langcode: en
-status: true
-dependencies: {  }
-name: 'Approval Signature Position'
-vid: approval_signature_position
-description: ''
-weight: 0

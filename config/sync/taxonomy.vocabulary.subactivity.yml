@@ -1,8 +1,0 @@
-uuid: f2ef6bf8-b88f-4eb3-ad78-ca0f5da2a929
-langcode: en
-status: true
-dependencies: {  }
-name: 'Financial Coding SubActivity'
-vid: subactivity
-description: ''
-weight: 0
