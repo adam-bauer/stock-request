@@ -1,0 +1,35 @@
+uuid: 622fd98f-e347-4a8e-9bd1-5bc6da1dfb12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.payment_status.field_date
+    - taxonomy.vocabulary.payment_status
+  module:
+    - datetime
+    - text
+id: taxonomy_term.payment_status.default
+targetEntityType: taxonomy_term
+bundle: payment_status
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date:
+    weight: 1
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

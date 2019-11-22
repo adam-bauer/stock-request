@@ -1,0 +1,45 @@
+uuid: 1038b74a-0fba-4f2e-9872-d0bf3c86cb5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.payment_status.field_date
+    - taxonomy.vocabulary.payment_status
+  module:
+    - datetime
+    - path
+    - text
+id: taxonomy_term.payment_status.default
+targetEntityType: taxonomy_term
+bundle: payment_status
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_date:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -13,6 +13,7 @@ dependencies:
       14: workbench_email.workbench_email_template.send_to_purchasing
       20: workbench_email.workbench_email_template.send_to_accounts_payable
       27: workbench_email.workbench_email_template.return_to_creator
+      33: workbench_email.workbench_email_template.sr_fulfilled
   module:
     - content_moderation
     - workbench_email
@@ -29,7 +30,8 @@ third_party_settings:
         send_to_director: send_to_director
       send_to_purchasing:
         send_to_purchasing: send_to_purchasing
-      send_to_accounts_payable: {  }
+      send_to_accounts_payable:
+        sr_fulfilled: sr_fulfilled
       return_to_creator:
         return_to_creator: return_to_creator
       publish: {  }

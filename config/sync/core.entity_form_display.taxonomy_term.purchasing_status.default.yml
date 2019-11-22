@@ -1,0 +1,22 @@
+uuid: fc14387e-32dd-4219-90e3-21cd184fa623
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.purchasing_status
+id: taxonomy_term.purchasing_status.default
+targetEntityType: taxonomy_term
+bundle: purchasing_status
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

@@ -1,0 +1,20 @@
+uuid: 788192f7-3eb4-439d-b550-ddb45c36df3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.stockrequest
+id: sr_fulfilled
+label: 'SR Fulfilled'
+subject: ' [node:title] has been Fulfilled'
+recipient_types:
+  author:
+    id: author
+    provider: workbench_email
+    status: true
+    settings: {  }
+bundles:
+  'node:stockrequest': 'node:stockrequest'
+body:
+  value: "The Stock Request you created has been Fulfilled\r\n [node:title]\r\n [node:url]"
+  format: plain_text

@@ -55,6 +55,7 @@ module:
   markup: 0
   menu_ui: 0
   module_filter: 0
+  module_missing_message_fixer: 0
   no_views_php: 0
   node: 0
   options: 0

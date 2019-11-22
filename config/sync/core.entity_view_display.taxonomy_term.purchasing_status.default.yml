@@ -1,0 +1,16 @@
+uuid: ab226a2d-563c-4d6a-9af2-14b9bb71d3bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.purchasing_status
+id: taxonomy_term.purchasing_status.default
+targetEntityType: taxonomy_term
+bundle: purchasing_status
+mode: default
+content: {  }
+hidden:
+  description: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true

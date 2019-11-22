@@ -1,4 +1,4 @@
-uuid: 747ddeff-4303-484a-bf3c-4d8c81e01fea
+uuid: 00d4f72f-31b6-44f0-8ab0-20d62d892928
 langcode: en
 status: true
 dependencies:
@@ -17,8 +17,8 @@ dependencies:
     - node
     - taxonomy
     - user
-id: sr_by_dept_vendor_date
-label: 'SR by Dept Vendor Date'
+id: payables_reports
+label: 'Payables Reports'
 module: views
 description: ''
 tag: ''
@@ -678,11 +678,11 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: 'By Dept Vendor'
+    display_title: 'billed diff'
     position: 1
     display_options:
       display_extenders: {  }
-      path: sr-by-dept-vendor-date
+      path: payable-billed-diff
       title: 'SR by Vendor Dept'
       defaults:
         title: false
@@ -1007,11 +1007,11 @@ display:
   page_2:
     display_plugin: page
     id: page_2
-    display_title: 'by SR num'
+    display_title: 'not billed'
     position: 1
     display_options:
       display_extenders: {  }
-      path: sr-by-sr-num
+      path: ppayable-not-billed
       title: 'SR by Stock Request Number'
       defaults:
         title: false
@@ -1176,6 +1176,29 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_date_requested'
+        - 'config:field.storage.node.field_department'
+        - 'config:field.storage.node.field_sr_'
+        - 'config:field.storage.node.field_vendor'
+  page_3:
+    display_plugin: page
+    id: page_3
+    display_title: 'Page 3'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      path: payable-submitted-junueu
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

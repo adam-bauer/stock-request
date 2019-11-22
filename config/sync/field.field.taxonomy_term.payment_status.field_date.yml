@@ -1,0 +1,24 @@
+uuid: 9ab6293a-717d-4acf-b092-4ecdb3703048
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_date
+    - taxonomy.vocabulary.payment_status
+  module:
+    - datetime
+id: taxonomy_term.payment_status.field_date
+field_name: field_date
+entity_type: taxonomy_term
+bundle: payment_status
+label: Date
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

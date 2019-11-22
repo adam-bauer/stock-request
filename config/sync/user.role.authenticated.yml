@@ -49,7 +49,6 @@ permissions:
   - 'view field_approved_by'
   - 'view field_approved_by_paragraph'
   - 'view field_billing_balance'
-  - 'view field_date'
   - 'view field_enc'
   - 'view field_financial_coding'
   - 'view field_items_received'
