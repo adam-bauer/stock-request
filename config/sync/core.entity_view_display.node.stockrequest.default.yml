@@ -193,7 +193,6 @@ third_party_settings:
         - field_shipping_cost
         - field_total_est_cost
         - field_total_note
-        - field_attached_files
       parent_name: group_stockrequest
       weight: 25
       format_type: tab
@@ -219,7 +218,7 @@ content:
     third_party_settings: {  }
     region: content
   field_attached_files:
-    weight: 24
+    weight: 5
     label: above
     settings:
       use_description_as_link_text: true
@@ -247,7 +246,7 @@ content:
     type: basic_string
     region: content
   field_comments:
-    weight: 7
+    weight: 8
     label: above
     settings:
       view_mode: default
@@ -349,7 +348,7 @@ content:
     type: text_default
     region: content
   field_invite_note:
-    weight: 6
+    weight: 7
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -415,7 +414,7 @@ content:
     type: list_default
     region: content
   field_send_invite:
-    weight: 5
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
