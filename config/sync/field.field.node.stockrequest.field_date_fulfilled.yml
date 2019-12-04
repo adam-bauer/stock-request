@@ -1,0 +1,21 @@
+uuid: 71cf76d1-aae8-4579-a0dc-0603979d773f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_fulfilled
+    - node.type.stockrequest
+  module:
+    - datetime
+id: node.stockrequest.field_date_fulfilled
+field_name: field_date_fulfilled
+entity_type: node
+bundle: stockrequest
+label: 'Date fulfilled'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.stockrequest.field_billing_and_shipping_info
     - field.field.node.stockrequest.field_comments
     - field.field.node.stockrequest.field_comments_for_darcie
+    - field.field.node.stockrequest.field_date_fulfilled
     - field.field.node.stockrequest.field_date_requested
     - field.field.node.stockrequest.field_date_required
     - field.field.node.stockrequest.field_department
@@ -152,7 +153,7 @@ third_party_settings:
         - group_financial_coding
         - group_invoices
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: tabs
       format_settings:
         direction: horizontal
@@ -246,13 +247,22 @@ content:
     type: basic_string
     region: content
   field_comments:
-    weight: 6
+    weight: 7
     label: above
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
     type: comment_default
+    region: content
+  field_date_fulfilled:
+    weight: 3
+    label: inline
+    settings:
+      timezone_override: America/Anchorage
+      format_type: html_date
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_date_requested:
     weight: 6
@@ -339,7 +349,7 @@ content:
     type: text_default
     region: content
   field_invite_note:
-    weight: 5
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -405,7 +415,7 @@ content:
     type: list_default
     region: content
   field_send_invite:
-    weight: 4
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
