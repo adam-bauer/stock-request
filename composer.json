@@ -69,6 +69,7 @@
         "drupal/tweme": "^4.1",
         "drupal/view_mode_page": "^3.1",
         "drupal/views_entity_form_field": "^1.0",
+        "drupal/views_field_view": "^1.0",
         "drupal/views_simple_math_field": "^1.5",
         "drupal/viewsreference": "^1.2",
         "drupal/workbench_email": "^1.0",
