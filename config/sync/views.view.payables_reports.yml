@@ -21,9 +21,11 @@ dependencies:
     - node.type.stockrequest
     - taxonomy.vocabulary.department
     - taxonomy.vocabulary.vendors
+    - workflows.workflow.stockrequest
   module:
     - better_exposed_filters
     - computed_field
+    - content_moderation
     - datetime
     - node
     - paragraphs
@@ -738,6 +740,69 @@ display:
         filter_groups: false
       display_description: ''
       fields:
+        field_sr_:
+          id: field_sr_
+          table: node__field_sr_
+          field: field_sr_
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'SR #'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -1246,6 +1311,69 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        moderation_state_1:
+          id: moderation_state_1
+          table: node_field_revision
+          field: moderation_state
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Moderation state'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: content_moderation_state
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -1455,6 +1583,45 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: datetime
+        moderation_state:
+          id: moderation_state
+          table: node_field_revision
+          field: moderation_state
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not in'
+          value:
+            stockrequest-send_to_archive: stockrequest-send_to_archive
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          plugin_id: moderation_state_filter
       filter_groups:
         operator: AND
         groups:
@@ -1473,10 +1640,12 @@ display:
         - 'config:field.storage.node.field_balance_not_billed'
         - 'config:field.storage.node.field_department'
         - 'config:field.storage.node.field_purchasing_status'
+        - 'config:field.storage.node.field_sr_'
         - 'config:field.storage.node.field_total_balance_due'
         - 'config:field.storage.node.field_total_billed_amount'
         - 'config:field.storage.node.field_total_est_cost'
         - 'config:field.storage.node.field_vendor'
+        - 'config:workflow_list'
   page_2:
     display_plugin: page
     id: page_2
