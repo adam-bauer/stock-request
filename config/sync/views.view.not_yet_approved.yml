@@ -19,7 +19,6 @@ description: 'View for Dept Dir that shows unapporved SRs'
 tag: ''
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -234,7 +233,7 @@ display:
           separator: ', '
           field_api_classes: false
           entity_type: node
-          plugin_id: field
+          plugin_id: moderation_state_field
       filters:
         status:
           value: '1'
@@ -246,6 +245,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         type:
           id: type
@@ -257,6 +258,9 @@ display:
           entity_field: type
           plugin_id: bundle
           group: 1
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
         field_approved_by_paragraph_target_id:
           id: field_approved_by_paragraph_target_id
           table: paragraph__field_approved_by_paragraph
@@ -281,6 +285,8 @@ display:
             remember_roles:
               authenticated: authenticated
             placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -320,6 +326,8 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

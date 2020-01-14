@@ -75,6 +75,7 @@ page_cache: 8.6.1
 paragraphs: 1.3.0
 paragraphs_type_permissions: 1.3.0
 path: 8.6.1
+path_alias: 8.8.1
 pbf: 1.2.0
 pdf_api: 0.0.0
 php: 1.0.0
