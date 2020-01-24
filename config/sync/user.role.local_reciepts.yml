@@ -1,0 +1,15 @@
+uuid: 06b6acb7-0a7e-4862-8eb0-a72213c8c011
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: 'This person tracks local receipts for each department'
+id: local_reciepts
+label: 'Local Reciepts'
+weight: 0
+is_admin: null
+permissions:
+  - 'edit any stockrequest content'

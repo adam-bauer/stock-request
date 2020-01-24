@@ -1,0 +1,14 @@
+uuid: c93e287c-8c5d-4381-ac65-15b538c8efc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.local_reciepts
+  module:
+    - user
+id: user_remove_role_action.local_reciepts
+label: 'Remove the Local Reciepts role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: local_reciepts

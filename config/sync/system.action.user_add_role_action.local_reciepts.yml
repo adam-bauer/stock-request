@@ -1,0 +1,14 @@
+uuid: 5aaa87e6-60c8-48a5-b1ca-76ec7318480a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.local_reciepts
+  module:
+    - user
+id: user_add_role_action.local_reciepts
+label: 'Add the Local Reciepts role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: local_reciepts
