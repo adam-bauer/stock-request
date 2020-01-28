@@ -1,0 +1,8 @@
+uuid: dd32f8a9-38c6-4d99-b857-4f8a89cbf7b6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Invoice Status'
+vid: invoice_status
+description: 'Used by accounts payable'
+weight: 0

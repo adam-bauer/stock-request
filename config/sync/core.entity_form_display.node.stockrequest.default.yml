@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.stockrequest.field_financial_coding_value
     - field.field.node.stockrequest.field_financial_report
     - field.field.node.stockrequest.field_invite_note
+    - field.field.node.stockrequest.field_invoice_status
     - field.field.node.stockrequest.field_items_to_order
     - field.field.node.stockrequest.field_justification
     - field.field.node.stockrequest.field_payables_notes
@@ -42,6 +43,7 @@ dependencies:
     - field.field.node.stockrequest.field_vendor_comments
     - field.field.node.stockrequest.field_vendor_invoice
     - node.type.stockrequest
+    - workflows.workflow.stockrequest
   module:
     - computed_field
     - content_moderation
@@ -313,6 +315,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: computed_number_widget
+    region: content
+  field_invoice_status:
+    weight: 47
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_items_to_order:
     type: entity_reference_paragraphs

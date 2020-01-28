@@ -1,0 +1,33 @@
+uuid: 0124fa08-d593-487e-9e79-d43f3d9a0d5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_invoice_status
+    - node.type.stockrequest
+    - taxonomy.vocabulary.invoice_status
+  content:
+    - 'taxonomy_term:invoice_status:f4f36588-74e8-4213-b8a6-ff379a040b23'
+id: node.stockrequest.field_invoice_status
+field_name: field_invoice_status
+entity_type: node
+bundle: stockrequest
+label: 'Invoice Status'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: f4f36588-74e8-4213-b8a6-ff379a040b23
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      invoice_status: invoice_status
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
