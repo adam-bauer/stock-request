@@ -11,7 +11,7 @@ field_name: field_vendor
 entity_type: node
 bundle: stockrequest
 label: Vendor
-description: "<p>Type the name of the vendor, it should auto populate</p>\r\n<p>Typing in a new name will create a new vendor. After saving the stock request you can edit the vendor properties separately by clicking on the vendor name in the new stock request  </p>\r\n<p>Please use caution when creating new vendors, Duplicate vendor entries can be problematic</p>"
+description: "<p>Type the name of the vendor, it should auto populate</p>\r\n<p>If the vendor you wish to use in not in the database please use the \"Comments to Vendor\" field below to pass the vendor into onto purchasing - please include as much info about the vendor as possible i.e. phone number, email.</p>\r\n"
 required: false
 translatable: false
 default_value: {  }
